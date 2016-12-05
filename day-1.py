@@ -39,8 +39,8 @@ right = {
     3: 0,  # west -> north
 }
 step = {
-    0: (0, 1),   # north + 1
-    1: (1, 0),   # east + 1
+    0: (0, 1),  # north + 1
+    1: (1, 0),  # east + 1
     2: (0, -1),  # south + 1
     3: (-1, 0),  # west + 1
 }

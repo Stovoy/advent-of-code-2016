@@ -56,9 +56,11 @@ For example, the real name for qzmt-zixmtkozy-ivhz-343 is very encrypted name.
 What is the sector ID of the room where North Pole objects are stored?
 """
 
+
 def rot(c, n):
     start = 97 if c.islower() else 65 if c.isupper() else False
     return chr((ord(c) - start + n) % 26 + start) if start else c
+
 
 with open('day-4-input.txt') as input:
     for room in input.readlines():

@@ -44,7 +44,7 @@ In your puzzle input, and instead reading by columns, how many of the listed tri
 
 # Get the triangles, then do the same loop as in part 1.
 triangles = []
-new_triangles = [[],[],[]]
+new_triangles = [[], [], []]
 with open('day-3-input.txt') as input:
     for triangle in input.readlines():
         sides = map(int, values_pattern.match(triangle).groups())
@@ -53,7 +53,7 @@ with open('day-3-input.txt') as input:
         if len(new_triangles[0]) == 3:
             for new_triangle in new_triangles:
                 triangles.append(new_triangle)
-            new_triangles = [[],[],[]]
+            new_triangles = [[], [], []]
 
 possible_count = 0
 for sides in triangles:
