@@ -1,5 +1,5 @@
 """
-# http://adventofcode.com/2016/day/5
+http://adventofcode.com/2016/day/5
 
 --- Day 5: How About a Nice Game of Chess? ---
 
@@ -27,13 +27,14 @@ for i in xrange(100000000):
     m = hashlib.md5()
     m.update(door_id + str(i))
     hex_hash = m.hexdigest()
-    if hex_hash[:5] == '00000':
+    if hex_hash.startswith('00000'):
         password += hex_hash[5]
         print password
         if len(password) == 8:
             break
 
 print
+
 """
 --- Part Two ---
 
@@ -57,9 +58,9 @@ password = [None] * 8
 found = 0
 for i in xrange(100000000):
     m = hashlib.md5()
-    m.update('cxdnnyjw' + str(i))
+    m.update(door_id + str(i))
     hex_hash = m.hexdigest()
-    if hex_hash[:5] == '00000':
+    if hex_hash.startswith('00000'):
         pos = hex_hash[5]
         if pos < '0' or pos > '7':
             continue
