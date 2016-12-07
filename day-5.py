@@ -24,7 +24,6 @@ door_id = 'cxdnnyjw'
 
 password = ''
 for i in xrange(100000000):
-    break
     m = hashlib.md5()
     m.update(door_id + str(i))
     hex_hash = m.hexdigest()
